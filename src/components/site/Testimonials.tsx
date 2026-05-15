@@ -2,21 +2,9 @@ import { useEffect, useState } from "react";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const items = [
-  {
-    name: "Emma Rousseau",
-    role: "Maire de Villebourg",
-    text: "HENA BTP a livré notre nouvelle médiathèque dans les délais impartis avec une qualité exceptionnelle. Une équipe à l'écoute, professionnelle et engagée du premier au dernier jour.",
-  },
-  {
-    name: "Nathan Martin",
-    role: "Directeur Immobilier — Atlas Group",
-    text: "Une collaboration exemplaire sur trois projets immobiliers. Le sérieux, la rigueur et la maîtrise technique de HENA BTP en font un partenaire de premier choix pour nos opérations.",
-  },
-  {
-    name: "Camille Dubois",
-    role: "Architecte DPLG",
-    text: "Je travaille avec HENA BTP depuis cinq ans. Leur capacité à transformer une vision architecturale ambitieuse en réalité concrète est tout simplement remarquable.",
-  },
+  { name: "Emma Tossou", role: "Maître d'ouvrage privée", text: "Cabinet PBC a réalisé notre villa familiale dans les délais avec une qualité exceptionnelle. Une équipe à l'écoute, professionnelle et engagée du premier au dernier jour." },
+  { name: "Nathan Kpondjo", role: "Directeur — Atlas Group Bénin", text: "Une collaboration exemplaire sur trois projets immobiliers. Le sérieux, la rigueur et la maîtrise technique de Cabinet PBC en font un partenaire de premier choix." },
+  { name: "Camille Dossou", role: "Promotrice immobilière", text: "Je travaille avec Cabinet PBC depuis plusieurs années. Leur capacité à transformer une vision architecturale en réalité concrète est tout simplement remarquable." },
 ];
 
 const Testimonials = () => {
@@ -39,23 +27,13 @@ const Testimonials = () => {
 
           <div className="relative mt-16 rounded-sm border border-border bg-card p-10 md:p-14">
             <Quote className="absolute -top-6 left-10 h-12 w-12 text-primary opacity-90" strokeWidth={1.5} />
-
             <div className="min-h-[180px]">
               {items.map((t, idx) => (
-                <div
-                  key={idx}
-                  className={`transition-opacity duration-500 ${
-                    idx === i ? "block animate-fade-in" : "hidden"
-                  }`}
-                >
+                <div key={idx} className={`transition-opacity duration-500 ${idx === i ? "block animate-fade-in" : "hidden"}`}>
                   <div className="mb-6 flex justify-center gap-1">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star key={s} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
+                    {Array.from({ length: 5 }).map((_, s) => (<Star key={s} className="h-4 w-4 fill-primary text-primary" />))}
                   </div>
-                  <p className="font-display text-xl italic leading-relaxed text-foreground md:text-2xl">
-                    « {t.text} »
-                  </p>
+                  <p className="font-display text-xl italic leading-relaxed text-foreground md:text-2xl">« {t.text} »</p>
                   <div className="mt-8">
                     <div className="font-display text-lg font-bold text-primary">{t.name}</div>
                     <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">{t.role}</div>
@@ -63,32 +41,16 @@ const Testimonials = () => {
                 </div>
               ))}
             </div>
-
             <div className="mt-10 flex items-center justify-center gap-4">
-              <button
-                onClick={prev}
-                aria-label="Précédent"
-                className="rounded-sm border border-border p-3 transition-colors hover:border-primary hover:text-primary"
-              >
+              <button onClick={prev} aria-label="Précédent" className="rounded-sm border border-border p-3 transition-colors hover:border-primary hover:text-primary">
                 <ChevronLeft className="h-4 w-4" />
               </button>
               <div className="flex gap-2">
                 {items.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setI(idx)}
-                    aria-label={`Témoignage ${idx + 1}`}
-                    className={`h-1.5 rounded-full transition-all ${
-                      idx === i ? "w-8 bg-gradient-gold" : "w-4 bg-foreground/20"
-                    }`}
-                  />
+                  <button key={idx} onClick={() => setI(idx)} aria-label={`Témoignage ${idx + 1}`} className={`h-1.5 rounded-full transition-all ${idx === i ? "w-8 bg-gradient-gold" : "w-4 bg-foreground/20"}`} />
                 ))}
               </div>
-              <button
-                onClick={next}
-                aria-label="Suivant"
-                className="rounded-sm border border-border p-3 transition-colors hover:border-primary hover:text-primary"
-              >
+              <button onClick={next} aria-label="Suivant" className="rounded-sm border border-border p-3 transition-colors hover:border-primary hover:text-primary">
                 <ChevronRight className="h-4 w-4" />
               </button>
             </div>
