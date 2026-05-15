@@ -1,24 +1,22 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Seo from "@/components/site/Seo";
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
-
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
+const NotFound = () => (
+  <>
+    <Seo title="Page introuvable — Cabinet PBC" description="La page que vous cherchez n'existe pas." path="/404" />
+    <section className="flex min-h-[70vh] items-center justify-center bg-navy py-32 text-center">
+      <div className="container-wide">
+        <p className="eyebrow mb-4">Erreur 404</p>
+        <h1 className="font-display text-6xl font-black md:text-8xl">Page <span className="text-gradient-gold">introuvable</span></h1>
+        <p className="mx-auto mt-6 max-w-md text-muted-foreground">
+          La page que vous recherchez n'existe pas ou a été déplacée.
+        </p>
+        <Link to="/" className="mt-10 inline-block rounded-sm bg-gradient-gold px-7 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-gold">
+          Retour à l'accueil
+        </Link>
       </div>
-    </div>
-  );
-};
+    </section>
+  </>
+);
 
 export default NotFound;
