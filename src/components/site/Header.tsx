@@ -1,15 +1,30 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
-import logo from "@/assets/hena-logo.png";
 
 const navItems = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "À propos", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Projets", href: "#projets" },
-  { label: "Équipe", href: "#equipe" },
-  { label: "Contact", href: "#contact" },
+  { label: "Accueil", to: "/" },
+  { label: "À propos", to: "/a-propos" },
+  { label: "Services", to: "/services" },
+  { label: "Projets", to: "/projets" },
+  { label: "Contact", to: "/contact" },
 ];
+
+const BrandMark = () => (
+  <Link to="/" className="flex items-center gap-3" aria-label="Cabinet PBC — Accueil">
+    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-sm bg-gradient-gold text-primary-foreground shadow-gold md:h-14 md:w-14">
+      <span className="font-display text-lg font-black md:text-xl">PBC</span>
+    </div>
+    <div className="leading-tight">
+      <div className="font-display text-xl font-bold tracking-wider text-foreground md:text-2xl">
+        CABINET <span className="text-gradient-gold">PBC</span>
+      </div>
+      <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground md:text-[11px]">
+        Plans Bâtiments &amp; Constructions
+      </div>
+    </div>
+  </Link>
+);
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,18 +39,17 @@ const Header = () => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      {/* Top utility bar */}
       <div className="hidden border-b border-border/40 bg-navy/80 backdrop-blur md:block">
         <div className="container-wide flex h-10 items-center justify-between text-xs text-muted-foreground">
           <div className="flex items-center gap-6">
-            <a href="tel:+33123456789" className="flex items-center gap-2 transition-colors hover:text-primary">
-              <Phone className="h-3.5 w-3.5 text-primary" /> +33 1 23 45 67 89
+            <a href="tel:+2290197767048" className="flex items-center gap-2 transition-colors hover:text-primary">
+              <Phone className="h-3.5 w-3.5 text-primary" /> +229 01 97 76 70 48
             </a>
-            <a href="mailto:contact@henabtp.fr" className="flex items-center gap-2 transition-colors hover:text-primary">
-              <Mail className="h-3.5 w-3.5 text-primary" /> contact@henabtp.fr
+            <a href="mailto:info@cabinetpbc.com" className="flex items-center gap-2 transition-colors hover:text-primary">
+              <Mail className="h-3.5 w-3.5 text-primary" /> info@cabinetpbc.com
             </a>
             <span className="flex items-center gap-2">
-              <Clock className="h-3.5 w-3.5 text-primary" /> Lun–Sam 8h00 – 17h30 · Dim Fermé
+              <Clock className="h-3.5 w-3.5 text-primary" /> Lun–Sam 8h00 – 17h30
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -46,44 +60,38 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main bar */}
-      <div
-        className={`transition-all duration-500 ${
-          scrolled ? "bg-navy/95 shadow-elegant backdrop-blur-md" : "bg-transparent"
-        }`}
-      >
+      <div className={`transition-all duration-500 ${scrolled ? "bg-navy/95 shadow-elegant backdrop-blur-md" : "bg-navy/40 backdrop-blur"}`}>
         <div className="container-wide flex h-20 items-center justify-between md:h-24">
-          <a href="#accueil" className="flex items-center gap-3">
-            <img src={logo} alt="HENA BTP" width={56} height={56} className="h-12 w-12 md:h-14 md:w-14" />
-            <div className="leading-tight">
-              <div className="font-display text-xl font-bold tracking-wider text-foreground md:text-2xl">
-                HENA <span className="text-gradient-gold">BTP</span>
-              </div>
-              <div className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
-                Construction · Excellence
-              </div>
-            </div>
-          </a>
+          <BrandMark />
 
           <nav className="hidden items-center gap-8 lg:flex">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="group relative text-sm font-medium uppercase tracking-wider text-foreground/85 transition-colors hover:text-primary"
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.to === "/"}
+                className={({ isActive }) =>
+                  `group relative text-sm font-medium uppercase tracking-wider transition-colors hover:text-primary ${
+                    isActive ? "text-primary" : "text-foreground/85"
+                  }`
+                }
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-gold transition-all duration-300 group-hover:w-full" />
-              </a>
+                {({ isActive }) => (
+                  <>
+                    {item.label}
+                    <span className={`absolute -bottom-1 left-0 h-px bg-gradient-gold transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
+                  </>
+                )}
+              </NavLink>
             ))}
           </nav>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="hidden rounded-sm bg-gradient-gold px-6 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-gold transition-transform hover:-translate-y-0.5 lg:inline-block"
           >
             Devis Gratuit
-          </a>
+          </Link>
 
           <button
             className="rounded-sm border border-border p-2 text-foreground lg:hidden"
@@ -94,27 +102,31 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div className="border-t border-border bg-navy lg:hidden">
             <nav className="container-wide flex flex-col gap-1 py-4">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === "/"}
                   onClick={() => setOpen(false)}
-                  className="rounded-sm px-3 py-3 text-sm font-medium uppercase tracking-wider text-foreground/90 transition-colors hover:bg-secondary hover:text-primary"
+                  className={({ isActive }) =>
+                    `rounded-sm px-3 py-3 text-sm font-medium uppercase tracking-wider transition-colors hover:bg-secondary hover:text-primary ${
+                      isActive ? "text-primary" : "text-foreground/90"
+                    }`
+                  }
                 >
                   {item.label}
-                </a>
+                </NavLink>
               ))}
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-sm bg-gradient-gold px-4 py-3 text-center text-sm font-semibold uppercase tracking-wider text-primary-foreground"
               >
                 Devis Gratuit
-              </a>
+              </Link>
             </nav>
           </div>
         )}
