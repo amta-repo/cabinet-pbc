@@ -5,8 +5,8 @@ import Team from "@/components/site/Team";
 const TeamPage = () => (
   <>
     <Seo
-      title="Notre équipe — Cabinet PBC | Architectes & ingénieurs au Bénin"
-      description="Rencontrez l'équipe de Cabinet PBC : architectes, ingénieurs, chefs de projet et designers basés à Abomey-Calavi."
+      title="Notre équipe — BATI Moderne Constructions | Architectes & ingénieurs au Bénin"
+      description="Rencontrez l'équipe de BATI Moderne Constructions : architectes, ingénieurs, chefs de projet et designers basés à Abomey-Calavi."
       path="/equipe"
     />
     <PageHero

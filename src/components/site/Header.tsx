@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/bati-logo.png";
 
 const navItems = [
   { label: "Accueil", to: "/" },
@@ -11,16 +12,14 @@ const navItems = [
 ];
 
 const BrandMark = () => (
-  <Link to="/" className="flex items-center gap-3" aria-label="Cabinet PBC — Accueil">
-    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-sm bg-gradient-gold text-primary-foreground shadow-gold md:h-14 md:w-14">
-      <span className="font-display text-lg font-black md:text-xl">PBC</span>
-    </div>
+  <Link to="/" className="flex items-center gap-3" aria-label="BATI Moderne Constructions — Accueil">
+    <img src={logo} alt="BATI Moderne Constructions" width={56} height={56} className="h-12 w-12 flex-none object-contain md:h-14 md:w-14" />
     <div className="leading-tight">
-      <div className="font-display text-xl font-bold tracking-wider text-foreground md:text-2xl">
-        CABINET <span className="text-gradient-gold">PBC</span>
+      <div className="font-display text-lg font-bold tracking-wider text-foreground md:text-xl">
+        BATI <span className="text-gradient-gold">MODERNE</span>
       </div>
       <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground md:text-[11px]">
-        Plans Bâtiments &amp; Constructions
+        Plans · Bâtiments · Constructions
       </div>
     </div>
   </Link>
@@ -45,8 +44,8 @@ const Header = () => {
             <a href="tel:+2290197767048" className="flex items-center gap-2 transition-colors hover:text-primary">
               <Phone className="h-3.5 w-3.5 text-primary" /> +229 01 97 76 70 48
             </a>
-            <a href="mailto:info@cabinetpbc.com" className="flex items-center gap-2 transition-colors hover:text-primary">
-              <Mail className="h-3.5 w-3.5 text-primary" /> info@cabinetpbc.com
+            <a href="mailto:info@batimoderne.com" className="flex items-center gap-2 transition-colors hover:text-primary">
+              <Mail className="h-3.5 w-3.5 text-primary" /> info@batimoderne.com
             </a>
             <span className="flex items-center gap-2">
               <Clock className="h-3.5 w-3.5 text-primary" /> Lun–Sam 8h00 – 17h30

@@ -6,14 +6,14 @@ import Testimonials from "@/components/site/Testimonials";
 const ServicesPage = () => (
   <>
     <Seo
-      title="Services — Plans, construction, suivi de chantier | Cabinet PBC"
-      description="Cabinet PBC à Abomey-Calavi : plans d'architecture, gros œuvre, génie civil, rénovation, aménagement intérieur et suivi de chantier au Bénin."
+      title="Services — Plans, construction, suivi de chantier | BATI Moderne Constructions"
+      description="BATI Moderne Constructions à Abomey-Calavi : plans d'architecture, gros œuvre, génie civil, rénovation, aménagement intérieur et suivi de chantier au Bénin."
       path="/services"
       jsonLd={{
         "@context": "https://schema.org",
         "@type": "Service",
-        name: "Services Cabinet PBC",
-        provider: { "@type": "GeneralContractor", name: "Cabinet PBC" },
+        name: "Services BATI Moderne Constructions",
+        provider: { "@type": "GeneralContractor", name: "BATI Moderne Constructions" },
         areaServed: "Bénin",
         serviceType: ["Plans d'architecture", "Gros œuvre", "Suivi de chantier", "Rénovation", "Génie civil"],
       }}
@@ -22,7 +22,7 @@ const ServicesPage = () => (
       eyebrow="Nos Services"
       title="Une expertise"
       highlight="complète"
-      description="De la première esquisse à la remise des clés, Cabinet PBC vous accompagne sur toute la chaîne de construction."
+      description="De la première esquisse à la remise des clés, BATI Moderne Constructions vous accompagne sur toute la chaîne de construction."
       current="Services"
     />
     <Services />
