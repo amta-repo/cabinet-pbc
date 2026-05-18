@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
+import FloatingWhatsApp from "@/components/site/FloatingWhatsApp";
 
 const SiteLayout = () => {
   const { pathname, hash } = useLocation();
@@ -17,6 +18,7 @@ const SiteLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
