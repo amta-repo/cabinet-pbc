@@ -1,6 +1,6 @@
 import { Check, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import about from "@/assets/about.jpg";
+import about from "@/assets/about-genie-civil.jpg";
 
 const points = [
   "Cabinet d'architecture et bureau d'études complet",
