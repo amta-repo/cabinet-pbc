@@ -11,7 +11,7 @@ const navItems = [
 ];
 
 const BrandMark = () => (
-  <Link to="/" className="flex items-center gap-3" aria-label="Cabinet PBC — Accueil">
+  <Link to="/" className="flex items-center gap-3" aria-label="BATI Moderne Constructions — Accueil">
     <div className="flex h-12 w-12 flex-none items-center justify-center rounded-sm bg-gradient-gold text-primary-foreground shadow-gold md:h-14 md:w-14">
       <span className="font-display text-lg font-black md:text-xl">PBC</span>
     </div>
@@ -45,8 +45,8 @@ const Header = () => {
             <a href="tel:+2290197767048" className="flex items-center gap-2 transition-colors hover:text-primary">
               <Phone className="h-3.5 w-3.5 text-primary" /> +229 01 97 76 70 48
             </a>
-            <a href="mailto:info@cabinetpbc.com" className="flex items-center gap-2 transition-colors hover:text-primary">
-              <Mail className="h-3.5 w-3.5 text-primary" /> info@cabinetpbc.com
+            <a href="mailto:info@batimoderne.com" className="flex items-center gap-2 transition-colors hover:text-primary">
+              <Mail className="h-3.5 w-3.5 text-primary" /> info@batimoderne.com
             </a>
             <span className="flex items-center gap-2">
               <Clock className="h-3.5 w-3.5 text-primary" /> Lun–Sam 8h00 – 17h30

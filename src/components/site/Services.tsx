@@ -20,7 +20,7 @@ const Services = () => {
             Une expertise <span className="text-gradient-gold">complète</span> du bâtiment
           </h2>
           <p className="mt-6 text-muted-foreground">
-            De la conception des plans à la livraison clé en main, Cabinet PBC vous accompagne sur l'ensemble de la chaîne de construction.
+            De la conception des plans à la livraison clé en main, BATI Moderne Constructions vous accompagne sur l'ensemble de la chaîne de construction.
           </p>
         </div>
 

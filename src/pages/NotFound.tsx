@@ -3,7 +3,7 @@ import Seo from "@/components/site/Seo";
 
 const NotFound = () => (
   <>
-    <Seo title="Page introuvable — Cabinet PBC" description="La page que vous cherchez n'existe pas." path="/404" />
+    <Seo title="Page introuvable — BATI Moderne Constructions" description="La page que vous cherchez n'existe pas." path="/404" />
     <section className="flex min-h-[70vh] items-center justify-center bg-navy py-32 text-center">
       <div className="container-wide">
         <p className="eyebrow mb-4">Erreur 404</p>

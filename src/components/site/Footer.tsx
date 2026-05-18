@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </Link>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Cabinet PBC accompagne particuliers, entreprises et collectivités au Bénin pour la conception de plans, le suivi de chantier et la construction d'ouvrages durables.
+            BATI Moderne Constructions accompagne particuliers, entreprises et collectivités au Bénin pour la conception de plans, le suivi de chantier et la construction d'ouvrages durables.
           </p>
           <div className="mt-6 flex gap-3">
             {[Facebook, Instagram, Linkedin].map((Icon, i) => (
@@ -68,7 +68,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li>C8RH+PJ Abomey-Calavi<br />Bénin</li>
             <li><a href="tel:+2290197767048" className="hover:text-primary">+229 01 97 76 70 48</a></li>
-            <li><a href="mailto:info@cabinetpbc.com" className="hover:text-primary">info@cabinetpbc.com</a></li>
+            <li><a href="mailto:info@batimoderne.com" className="hover:text-primary">info@batimoderne.com</a></li>
             <li>Lun – Sam : 8h00 – 17h30</li>
           </ul>
         </div>
@@ -76,7 +76,7 @@ const Footer = () => {
 
       <div className="border-t border-border">
         <div className="container-wide flex flex-wrap items-center justify-between gap-4 py-6 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Cabinet PBC. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} BATI Moderne Constructions. Tous droits réservés.</p>
           <div className="flex items-center gap-6">
             <Link to="/faq" className="hover:text-primary">FAQs</Link>
             <a href="#" className="hover:text-primary">Mentions légales</a>

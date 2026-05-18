@@ -10,15 +10,15 @@ import Clients from "@/components/site/Clients";
 const Home = () => (
   <>
     <Seo
-      title="Cabinet PBC — Plans, Bâtiments & Constructions à Abomey-Calavi"
-      description="Cabinet PBC : architecture, plans, suivi de chantier et construction au Bénin. Devis gratuit. Basé à Abomey-Calavi."
+      title="BATI Moderne Constructions — Plans, Bâtiments & Constructions à Abomey-Calavi"
+      description="BATI Moderne Constructions : architecture, plans, suivi de chantier et construction au Bénin. Devis gratuit. Basé à Abomey-Calavi."
       path="/"
       jsonLd={{
         "@context": "https://schema.org",
         "@type": "GeneralContractor",
-        name: "Cabinet PBC (Plans Bâtiments & Constructions)",
+        name: "BATI Moderne Constructions",
         telephone: "+229 01 97 76 70 48",
-        email: "info@cabinetpbc.com",
+        email: "info@batimoderne.com",
         address: { "@type": "PostalAddress", addressLocality: "Abomey-Calavi", addressCountry: "BJ" },
         geo: { "@type": "GeoCoordinates", latitude: 6.4417886, longitude: 2.3290464 },
         areaServed: "Bénin",

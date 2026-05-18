@@ -11,7 +11,7 @@ const slides = [
     eyebrow: "Plans · Bâtiments · Constructions",
     title: ["CONSTRUIRE", "L'EXCELLENCE"],
     ghost: "BÂTIR",
-    text: "Cabinet PBC conçoit vos plans et réalise vos projets de construction au Bénin avec une exigence absolue de qualité, de sécurité et de durabilité.",
+    text: "BATI Moderne Constructions conçoit vos plans et réalise vos projets de construction au Bénin avec une exigence absolue de qualité, de sécurité et de durabilité.",
   },
   {
     image: hero2,

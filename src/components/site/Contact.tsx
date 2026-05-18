@@ -19,7 +19,7 @@ const Contact = () => {
     const message = String(data.get("message") || "");
 
     const lines = [
-      "*Nouvelle demande — Cabinet PBC*",
+      "*Nouvelle demande — BATI Moderne Constructions*",
       `*Nom :* ${name}`,
       `*Email :* ${email}`,
       phone ? `*Téléphone :* ${phone}` : "",
@@ -52,7 +52,7 @@ const Contact = () => {
           <div className="mt-12 space-y-6">
             {[
               { Icon: Phone, label: "Téléphone / WhatsApp", val: "+229 01 97 76 70 48", href: "tel:+2290197767048" },
-              { Icon: Mail, label: "Email", val: "info@cabinetpbc.com", href: "mailto:info@cabinetpbc.com" },
+              { Icon: Mail, label: "Email", val: "info@batimoderne.com", href: "mailto:info@batimoderne.com" },
               { Icon: MapPin, label: "Adresse", val: "C8RH+PJ Abomey-Calavi, Bénin" },
             ].map(({ Icon, label, val, href }) => (
               <div key={label} className="group flex items-start gap-4">
@@ -73,7 +73,7 @@ const Contact = () => {
 
           <div className="mt-10 overflow-hidden rounded-sm border border-border">
             <iframe
-              title="Cabinet PBC sur Google Maps"
+              title="BATI Moderne Constructions sur Google Maps"
               src="https://www.google.com/maps?q=Cabinet+PBC+Plans+Batiments+Constructions+Abomey-Calavi&hl=fr&z=17&output=embed"
               width="100%"
               height="280"
@@ -119,7 +119,7 @@ const Contact = () => {
             <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
           <p className="mt-3 text-xs text-muted-foreground">
-            En cliquant, votre message s'ouvre dans WhatsApp et sera transmis directement à Cabinet PBC.
+            En cliquant, votre message s'ouvre dans WhatsApp et sera transmis directement à BATI Moderne Constructions.
           </p>
         </form>
       </div>

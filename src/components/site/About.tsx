@@ -16,7 +16,7 @@ const About = () => {
       <div className="container-wide grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div className="relative">
           <div className="relative overflow-hidden rounded-sm shadow-elegant">
-            <img src={about} alt="Équipe Cabinet PBC sur chantier à Abomey-Calavi" width={1280} height={896} loading="lazy" className="h-full w-full object-cover" />
+            <img src={about} alt="Équipe BATI Moderne Constructions sur chantier à Abomey-Calavi" width={1280} height={896} loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="absolute -bottom-8 -right-4 hidden rounded-sm bg-gradient-gold p-8 shadow-gold md:block">
             <div className="font-display text-5xl font-black text-primary-foreground">10+</div>
@@ -27,12 +27,12 @@ const About = () => {
         </div>
 
         <div>
-          <p className="eyebrow mb-4">À propos de Cabinet PBC</p>
+          <p className="eyebrow mb-4">À propos de BATI Moderne Constructions</p>
           <h2 className="font-display text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
             Plans, bâtiments &amp; <span className="text-gradient-gold">constructions</span>
           </h2>
           <p className="mt-6 text-muted-foreground">
-            Basé à Abomey-Calavi, Cabinet PBC est un acteur de référence du bâtiment au Bénin. Notre approche combine rigueur technique, créativité architecturale et respect des engagements pour livrer des ouvrages d'exception.
+            Basé à Abomey-Calavi, BATI Moderne Constructions est un acteur de référence du bâtiment au Bénin. Notre approche combine rigueur technique, créativité architecturale et respect des engagements pour livrer des ouvrages d'exception.
           </p>
           <p className="mt-4 text-muted-foreground">
             Nous accompagnons particuliers, entreprises et collectivités dans la réalisation de leurs projets — de la conception des plans à la livraison clé en main.

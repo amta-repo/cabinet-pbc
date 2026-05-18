@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const items = [
-  { name: "Emma Tossou", role: "Maître d'ouvrage privée", text: "Cabinet PBC a réalisé notre villa familiale dans les délais avec une qualité exceptionnelle. Une équipe à l'écoute, professionnelle et engagée du premier au dernier jour." },
-  { name: "Nathan Kpondjo", role: "Directeur — Atlas Group Bénin", text: "Une collaboration exemplaire sur trois projets immobiliers. Le sérieux, la rigueur et la maîtrise technique de Cabinet PBC en font un partenaire de premier choix." },
-  { name: "Camille Dossou", role: "Promotrice immobilière", text: "Je travaille avec Cabinet PBC depuis plusieurs années. Leur capacité à transformer une vision architecturale en réalité concrète est tout simplement remarquable." },
+  { name: "Emma Tossou", role: "Maître d'ouvrage privée", text: "BATI Moderne Constructions a réalisé notre villa familiale dans les délais avec une qualité exceptionnelle. Une équipe à l'écoute, professionnelle et engagée du premier au dernier jour." },
+  { name: "Nathan Kpondjo", role: "Directeur — Atlas Group Bénin", text: "Une collaboration exemplaire sur trois projets immobiliers. Le sérieux, la rigueur et la maîtrise technique de BATI Moderne Constructions en font un partenaire de premier choix." },
+  { name: "Camille Dossou", role: "Promotrice immobilière", text: "Je travaille avec BATI Moderne Constructions depuis plusieurs années. Leur capacité à transformer une vision architecturale en réalité concrète est tout simplement remarquable." },
 ];
 
 const Testimonials = () => {

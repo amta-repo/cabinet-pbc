@@ -5,7 +5,7 @@ import PageHero from "@/components/site/PageHero";
 
 const faqs = [
   {
-    q: "Quels services propose Cabinet PBC ?",
+    q: "Quels services propose BATI Moderne Constructions ?",
     a: "Nous concevons des plans d'architecture, réalisons le gros œuvre, le génie civil, la rénovation, l'aménagement intérieur et assurons le suivi complet de chantier au Bénin.",
   },
   {
@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Comment obtenir un devis ?",
-    a: "Remplissez le formulaire de la page Contact — votre demande arrive directement sur notre WhatsApp. Vous pouvez aussi nous appeler au +229 01 97 76 70 48 ou écrire à info@cabinetpbc.com.",
+    a: "Remplissez le formulaire de la page Contact — votre demande arrive directement sur notre WhatsApp. Vous pouvez aussi nous appeler au +229 01 97 76 70 48 ou écrire à info@batimoderne.com.",
   },
   {
     q: "Le devis est-il gratuit ?",
@@ -44,8 +44,8 @@ const FaqPage = () => {
   return (
     <>
       <Seo
-        title="FAQs — Cabinet PBC | Questions fréquentes"
-        description="Réponses aux questions fréquentes sur Cabinet PBC : services, zone d'intervention, devis, délais et suivi de chantier au Bénin."
+        title="FAQs — BATI Moderne Constructions | Questions fréquentes"
+        description="Réponses aux questions fréquentes sur BATI Moderne Constructions : services, zone d'intervention, devis, délais et suivi de chantier au Bénin."
         path="/faq"
         jsonLd={{
           "@context": "https://schema.org",
@@ -61,7 +61,7 @@ const FaqPage = () => {
         eyebrow="FAQs"
         title="Questions"
         highlight="fréquentes"
-        description="Tout ce que vous devez savoir sur Cabinet PBC, nos prestations et notre méthode de travail."
+        description="Tout ce que vous devez savoir sur BATI Moderne Constructions, nos prestations et notre méthode de travail."
         current="FAQs"
       />
       <section className="bg-background py-24 md:py-32">
