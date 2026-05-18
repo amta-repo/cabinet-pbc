@@ -49,15 +49,17 @@ const About = () => {
             ))}
           </ul>
 
-          <div className="mt-10 flex items-center gap-6">
+          <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link to="/projets" className="group inline-flex items-center gap-3 rounded-sm bg-gradient-gold px-7 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-gold transition-transform hover:-translate-y-0.5">
               Voir nos réalisations
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <div className="hidden sm:block">
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Appelez-nous</div>
-              <a href="tel:+2290197767048" className="font-display text-xl font-bold text-primary">+229 01 97 76 70 48</a>
-            </div>
+            <a
+              href="tel:+2290197767048"
+              className="inline-flex items-center gap-3 rounded-sm border-2 border-primary/60 bg-transparent px-7 py-4 text-sm font-semibold uppercase tracking-wider text-foreground transition-all hover:border-primary hover:bg-primary/10 hover:text-primary"
+            >
+              Appelez-nous · +229 01 97 76 70 48
+            </a>
           </div>
         </div>
       </div>
