@@ -29,10 +29,14 @@ const Contact = () => {
       message,
     ].filter(Boolean).join("\n");
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`;
+    const subject = `Nouvelle demande — ${name}`;
+    const body = lines.replace(/\*/g, "");
+    const mailto = `mailto:info@batimoderne.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(wa, "_blank", "noopener,noreferrer");
+    window.location.href = mailto;
     setLoading(false);
-    toast.success("Redirection vers WhatsApp", { description: "Envoyez le message pour finaliser votre demande." });
+    toast.success("Message prêt à être envoyé", { description: "WhatsApp s'ouvre et votre client email se prépare en parallèle." });
     form.reset();
   };
 
