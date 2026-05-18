@@ -19,7 +19,7 @@ const BrandMark = () => (
         BATI <span className="text-gradient-gold">MODERNE</span>
       </div>
       <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground md:text-[11px]">
-        Plans · Bâtiments · Constructions
+        Constructions
       </div>
     </div>
   </Link>
