@@ -1,5 +1,5 @@
 import { Quote, Phone, Mail } from "lucide-react";
-import founder from "@/assets/founder-card.jpg";
+import founder from "@/assets/US.jpg";
 
 const Founder = () => (
   <section className="relative overflow-hidden bg-navy-light py-24 md:py-32">
