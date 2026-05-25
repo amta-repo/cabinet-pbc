@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Menu, X, Phone, Mail, Clock, Facebook, Instagram, Linkedin, ChevronDown, ArrowUpRight } from "lucide-react";
 import logo from "@/assets/bati-logo.png";
+import { services } from "@/data/services";
 
 const navItems = [
   { label: "Accueil", to: "/" },
   { label: "À propos", to: "/a-propos" },
-  { label: "Services", to: "/services" },
+  { label: "Services", to: "/services", mega: true },
   { label: "Projets", to: "/projets" },
   { label: "Contact", to: "/contact" },
 ];
@@ -28,6 +29,7 @@ const BrandMark = () => (
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [hoverImage, setHoverImage] = useState<string>(services[0].image);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -65,23 +67,61 @@ const Header = () => {
 
           <nav className="hidden items-center gap-8 lg:flex">
             {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === "/"}
-                className={({ isActive }) =>
-                  `group relative text-sm font-medium uppercase tracking-wider transition-colors hover:text-primary ${
-                    isActive ? "text-primary" : "text-foreground/85"
-                  }`
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    {item.label}
-                    <span className={`absolute -bottom-1 left-0 h-px bg-gradient-gold transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
-                  </>
+              <div key={item.to} className="group relative">
+                <NavLink
+                  to={item.to}
+                  end={item.to === "/"}
+                  className={({ isActive }) =>
+                    `relative inline-flex items-center gap-1 text-sm font-medium uppercase tracking-wider transition-colors hover:text-primary ${
+                      isActive ? "text-primary" : "text-foreground/85"
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      {item.label}
+                      {item.mega && <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />}
+                      <span className={`absolute -bottom-1 left-0 h-px bg-gradient-gold transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
+                    </>
+                  )}
+                </NavLink>
+
+                {item.mega && (
+                  <div className="invisible absolute left-1/2 top-full z-50 w-[920px] -translate-x-1/2 pt-6 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100">
+                    <div className="grid grid-cols-5 overflow-hidden rounded-sm border border-border bg-[hsl(215_40%_6%)] shadow-elegant">
+                      <div className="col-span-3 grid grid-cols-2 gap-x-4 gap-y-1 p-8">
+                        {services.map((s) => (
+                          <Link
+                            key={s.slug}
+                            to={`/services/${s.slug}`}
+                            onMouseEnter={() => setHoverImage(s.image)}
+                            className="group/item block rounded-sm p-4 transition-colors hover:bg-secondary/60"
+                          >
+                            <div className="flex items-center justify-between">
+                              <h4 className="text-[15px] font-semibold text-foreground transition-colors group-hover/item:text-primary">
+                                {s.title}
+                              </h4>
+                              <ArrowUpRight className="h-4 w-4 text-primary opacity-0 transition-all group-hover/item:opacity-100" />
+                            </div>
+                            <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{s.short}</p>
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="relative col-span-2 min-h-[340px] overflow-hidden">
+                        <img src={hoverImage} alt="Aperçu services" className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-6">
+                          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">Notre savoir-faire</p>
+                          <p className="mt-2 font-display text-xl font-bold text-foreground">Construire l'excellence au Bénin</p>
+                          <Link to="/services" className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-foreground hover:text-primary">
+                            Tous les services <ArrowUpRight className="h-3.5 w-3.5" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 )}
-              </NavLink>
+              </div>
             ))}
           </nav>
 
