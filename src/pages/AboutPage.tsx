@@ -8,6 +8,8 @@ import MissionVisionValues from "@/components/site/MissionVisionValues";
 import Founder from "@/components/site/Founder";
 import Team from "@/components/site/Team";
 import Clients from "@/components/site/Clients";
+import OurSectors from "@/components/site/OurSectors";
+import CtaBanner from "@/components/site/CtaBanner";
 import hero2 from "@/assets/hero-2.jpg";
 
 const reasons = [
@@ -33,6 +35,7 @@ const AboutPage = () => (
     />
     <About />
     <MissionVisionValues />
+    <OurSectors />
     <Stats />
     <Founder />
     <Team />
@@ -72,6 +75,7 @@ const AboutPage = () => (
     </section>
 
     <Clients />
+    <CtaBanner />
   </>
 );
 
