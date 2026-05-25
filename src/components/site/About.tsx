@@ -29,7 +29,7 @@ const About = () => {
         <div>
           <p className="eyebrow mb-4">À propos de BATI Moderne Constructions</p>
           <h2 className="font-display text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            Plans, bâtiments &amp; <span className="text-gradient-gold">constructions</span>
+            Batir, Investir &amp; <span className="text-gradient-gold">Innover</span>
           </h2>
           <p className="mt-6 text-muted-foreground">
             Basé à Abomey-Calavi, BATI Moderne Constructions est un acteur de référence du bâtiment au Bénin. Notre approche combine rigueur technique, créativité architecturale et respect des engagements pour livrer des ouvrages d'exception.
