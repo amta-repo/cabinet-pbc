@@ -1,5 +1,8 @@
 import Seo from "@/components/site/Seo";
 import Hero from "@/components/site/Hero";
+import WhoWeAre from "@/components/site/WhoWeAre";
+import OurSectors from "@/components/site/OurSectors";
+import CtaBanner from "@/components/site/CtaBanner";
 import Services from "@/components/site/Services";
 import About from "@/components/site/About";
 import Projects from "@/components/site/Projects";
@@ -25,10 +28,13 @@ const Home = () => (
       }}
     />
     <Hero />
+    <WhoWeAre />
     <Services />
+    <OurSectors />
     <About />
     <Projects />
     <Stats />
+    <CtaBanner />
     <Testimonials />
     <Clients />
   </>

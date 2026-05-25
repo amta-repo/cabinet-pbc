@@ -7,6 +7,7 @@ const navLinks = [
   { label: "À propos", to: "/a-propos" },
   { label: "Services", to: "/services" },
   { label: "Projets", to: "/projets" },
+  { label: "Actualités", to: "/actualites" },
   { label: "Équipe", to: "/equipe" },
   { label: "FAQs", to: "/faq" },
   { label: "Contact", to: "/contact" },
