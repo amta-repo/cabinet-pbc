@@ -1,33 +1,19 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, MoveUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 
 const slides = [
-  {
-    image: hero1,
-    eyebrow: "Plans · Bâtiments · Constructions",
-    title: ["CONSTRUIRE", "L'EXCELLENCE"],
-    ghost: "BÂTIR",
-    text: "BATI Moderne Constructions conçoit vos plans et réalise vos projets de construction au Bénin avec une exigence absolue de qualité, de sécurité et de durabilité.",
-  },
-  {
-    image: hero2,
-    eyebrow: "Bureau d'études & maîtrise d'œuvre",
-    title: ["DES PLANS", "SUR MESURE"],
-    ghost: "PLANS",
-    text: "De l'étude de faisabilité aux plans d'exécution, notre équipe traduit vos idées en projets concrets, livrés dans les délais et le budget.",
-  },
-  {
-    image: hero3,
-    eyebrow: "Suivi de chantier rigoureux",
-    title: ["BÂTIR LA", "CONFIANCE"],
-    ghost: "EXPERTISE",
-    text: "Architectes, ingénieurs et chefs de chantier — une équipe pluridisciplinaire au service de la réussite de chaque projet à Abomey-Calavi.",
-  },
+  { image: hero1 },
+  { image: hero2 },
+  { image: hero3 },
 ];
+
+const headline = ["BÂTIR.", "INVESTIR.", "INNOVER."];
+const subtitle =
+  "Architectes, ingénieurs et chefs de chantier — une équipe pluridisciplinaire au service de la réussite de chaque projet à Abomey-Calavi.";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -41,7 +27,7 @@ const Hero = () => {
   const next = () => setIndex((i) => (i + 1) % slides.length);
 
   return (
-    <section className="relative h-screen min-h-[640px] w-full overflow-hidden bg-navy">
+    <section className="relative h-screen min-h-[680px] w-full overflow-hidden bg-navy">
       {slides.map((s, i) => (
         <div
           key={i}
@@ -49,50 +35,61 @@ const Hero = () => {
         >
           <img
             src={s.image}
-            alt={s.title.join(" ")}
+            alt="BATI Moderne Constructions — chantier"
             width={1920}
             height={1080}
             className={`h-full w-full object-cover ${i === index ? "animate-slow-zoom" : ""}`}
             {...(i === 0 ? {} : { loading: "lazy" as const })}
           />
-          <div className="absolute inset-0" style={{ background: "var(--gradient-overlay)" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/70 to-navy/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
         </div>
       ))}
 
       <div className="relative z-10 flex h-full items-center">
-        <div className="container-wide">
-          {slides.map((s, i) => (
-            <div key={i} className={`max-w-2xl transition-all duration-700 ${i === index ? "block animate-fade-up" : "hidden"}`}>
-              <div className="relative">
-                <div className="pointer-events-none absolute -left-2 -top-16 select-none font-display text-[120px] font-black leading-none ghost-text md:text-[180px]">
-                  {s.ghost}
-                </div>
-                <p className="eyebrow mb-6 relative">{s.eyebrow}</p>
-                <h1 className="relative font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-8xl">
-                  {s.title[0]}
-                  <br />
-                  <span className="text-gradient-gold">{s.title[1]}</span>
-                </h1>
-                <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{s.text}</p>
-                <div className="mt-10 flex flex-wrap gap-4">
-                  <Link
-                    to="/projets"
-                    className="group inline-flex items-center gap-3 rounded-sm bg-gradient-gold px-7 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-gold transition-transform hover:-translate-y-0.5"
-                  >
-                    Découvrir nos projets
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-3 rounded-sm border border-primary/60 bg-transparent px-7 py-4 text-sm font-semibold uppercase tracking-wider text-foreground transition-all hover:border-primary hover:bg-primary/10"
-                  >
-                    Nous contacter
-                  </Link>
-                </div>
-              </div>
+        <div className="container-wide grid w-full items-end gap-10 pb-24 pt-32 lg:grid-cols-12 lg:items-center lg:pb-0 lg:pt-0">
+          <div className="lg:col-span-8 animate-fade-up">
+            <p className="eyebrow mb-6">Plans · Bâtiments · Constructions</p>
+            <h1 className="font-display text-6xl font-black uppercase leading-[0.95] tracking-tight text-foreground md:text-8xl lg:text-[8.5rem]">
+              {headline.map((line, i) => (
+                <span key={i} className="block">
+                  {i === 1 ? <span className="text-gradient-gold">{line}</span> : line}
+                </span>
+              ))}
+            </h1>
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{subtitle}</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                to="/projets"
+                className="group inline-flex items-center gap-3 rounded-sm bg-gradient-gold px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-primary-foreground shadow-gold transition-transform hover:-translate-y-0.5"
+              >
+                Découvrir nos projets
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
-          ))}
+          </div>
+
+          <div className="hidden lg:col-span-4 lg:block">
+            <Link
+              to="/contact"
+              className="group relative block overflow-hidden rounded-sm bg-background/95 p-10 shadow-elegant backdrop-blur transition-all hover:-translate-y-1 hover:shadow-gold"
+            >
+              <span className="absolute left-0 top-0 h-1 w-full bg-gradient-gold" />
+              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">Travaillons ensemble</p>
+              <div className="mt-6 flex items-end justify-between gap-6">
+                <h3 className="font-display text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                  Contactez-<br />nous
+                </h3>
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-gradient-gold text-primary-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                  <MoveUpRight className="h-5 w-5" />
+                </span>
+              </div>
+              <div className="mt-8 h-px w-full bg-border" />
+              <p className="mt-6 text-sm text-muted-foreground">
+                Devis gratuit sous 48h. Étude personnalisée et confidentielle.
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
 
