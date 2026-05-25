@@ -3,7 +3,7 @@ import plans from "@/assets/service-plans.jpg";
 import genieCivil from "@/assets/service-genie-civil.jpg";
 import renovation from "@/assets/service-renovation.jpg";
 import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
+import suivChantier from "@/assets/US.jpg";
 
 export interface ServiceItem {
   slug: string;
@@ -87,7 +87,7 @@ export const services: ServiceItem[] = [
     title: "Suivi de Chantier",
     short: "Coordination rigoureuse, contrôle qualité et reporting transparent jusqu'à la livraison.",
     icon: "ClipboardCheck",
-    image: hero3,
+    image: suivChantier,
     eyebrow: "Maîtrise d'œuvre",
     description: "Notre maîtrise d'œuvre indépendante protège vos intérêts. Nous coordonnons les entreprises, vérifions la qualité, contrôlons les budgets et vous tenons informé chaque semaine.",
     deliverables: ["Planification et suivi de planning","Réunions de chantier hebdomadaires","Reporting photographique et rapports","Contrôle des situations de travaux","Réception et levée des réserves"],
