@@ -23,7 +23,7 @@ const WhoWeAre = () => (
         <div>
           <p className="eyebrow mb-4">À propos de nous</p>
           <h2 className="font-display text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
-            Who <span className="text-gradient-gold">We Are</span>
+            Qui <span className="text-gradient-gold">Sommes-Nous</span>
           </h2>
         </div>
         <Link

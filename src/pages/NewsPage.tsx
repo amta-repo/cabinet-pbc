@@ -37,7 +37,7 @@ const NewsPage = () => (
     <section className="bg-navy pt-36 pb-16 md:pt-44">
       <div className="container-wide grid items-end gap-10 md:grid-cols-2">
         <h1 className="font-display text-6xl font-bold leading-none text-foreground md:text-8xl">
-          News<span className="text-primary">.</span>
+          Actualités<span className="text-primary">.</span>
         </h1>
         <p className="max-w-md text-muted-foreground md:justify-self-end">
           Nos équipes relèvent chaque jour de nouveaux défis. Ces histoires en sont le reflet — projets, innovations et engagements.
