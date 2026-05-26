@@ -5,6 +5,7 @@ import PageHero from "@/components/site/PageHero";
 import About from "@/components/site/About";
 import Stats from "@/components/site/Stats";
 import MissionVisionValues from "@/components/site/MissionVisionValues";
+import Approach from "@/components/site/Approach";
 import Founder from "@/components/site/Founder";
 import Team from "@/components/site/Team";
 import Clients from "@/components/site/Clients";
@@ -36,6 +37,7 @@ const AboutPage = () => (
     <About />
     <MissionVisionValues />
     <OurSectors />
+    <Approach />
     <Stats />
     <Founder />
     <Team />

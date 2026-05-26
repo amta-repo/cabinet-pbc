@@ -50,14 +50,14 @@ const Hero = () => {
         <div className="container-wide grid w-full items-end gap-10 pb-24 pt-32 lg:grid-cols-12 lg:items-center lg:pb-0 lg:pt-0">
           <div className="lg:col-span-8 animate-fade-up">
             <p className="eyebrow mb-6">Plans · Bâtiments · Constructions</p>
-            <h1 className="font-display text-6xl font-black uppercase leading-[0.95] tracking-tight text-foreground md:text-8xl lg:text-[8.5rem]">
+            <h1 className="font-display text-2xl font-black uppercase leading-[1] tracking-tight text-foreground md:text-3xl lg:text-5xl">
               {headline.map((line, i) => (
                 <span key={i} className="block">
                   {i === 1 ? <span className="text-gradient-gold">{line}</span> : line}
                 </span>
               ))}
             </h1>
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{subtitle}</p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{subtitle}</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 to="/projets"
